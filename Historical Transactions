@@ -1,0 +1,95 @@
+--Query created to pull historical transactions from a DB2 database to use for analysis. Redaction done via "X" to cover sensitive/identifiable information.
+
+select concat(a.XXXXX,a.XXXXX)            as "XXXXX"
+,       a.XXXXX                                as "XXXXX"
+,       replace(c.XXXXX, '-', '')            as "XXXXX"
+,       a.XXXXX                     as "XXXXX"
+,       a.XXXXX                         as "XXXXX"
+,       a.XXXXX                               as "XXXXX"
+,       a.XXXXX                                as "XXXXX"
+,       b.XXXXX                            as "XXXXX"
+,       a.XXXXX                            as "XXXXX"
+,       CASE
+        WHEN a.XXXXX = 31 then '999'
+        else trim(XXXXX) end           as "XXXXX"
+,       CASE
+        WHEN a.XXXXX = 31 then 'XXXXX'
+        else trim(d.XXXXX) end           as "XXXXX"
+,       sum(a.XXXXX)                         as "XXXXX"
+,       a.XXXXX                            as "XXXXX"
+,       a.XXXXX                       as "XXXXX"
+,       e.XXXXX                       as "XXXXX"
+,       CASE
+        WHEN e.XXXXX = 1 then 'XXXXX'
+        WHEN e.XXXXX = 15 then 'XXXXX'
+        WHEN e.XXXXX = 19 then 'XXXXX'
+        WHEN e.XXXXX = 21 then 'XXXXX'
+        WHEN e.XXXXX = 17 then 'XXXXX'
+        WHEN e.XXXXX = 11 then 'XXXXX'
+        ELSE NULL END                            as "XXXXX"
+,       CASE
+        WHEN f.XXXXX
+        THEN 'Please Review'
+        ELSE char(f.XXXXX)
+        END                                      as "XXXXX"
+
+FROM db2.XXXXX a
+--XXXXX English Table
+join QRY.XXXXX b
+        on a.XXXXX = b.XXXXX
+--XXXXX Table
+join DB2.XXXXX c
+     on a.XXXXX = c.XXXXX
+             and a.XXXXX = c.XXXXX
+        and a.XXXXX = c.XXXXX
+--XXXXX Info Table
+join db2.XXXXX e
+        on e.XXXXX = a.XXXXX
+                and e.XXXXX = a.XXXXX
+                and e.XXXXX = a.XXXXX
+--XXXXX Type English Table
+join db2.XXXXX d
+        on a.XXXXX=d.XXXXX
+                and a.XXXXX=d.XXXXX
+                and a.XXXXX=d.XXXXX
+left join DB2.XXXXX f
+        on a.XXXXX=f.XXXXX
+                and a.XXXXX=f.XXXXX
+                and a.XXXXX=f.XXXXX
+--CRITERIA: XXXXX PREFIX
+WHERE a.XXXXX   = ''
+--CRITERIA: CONTRACT 5 DIGIT CODE
+AND a.XXXXX = 
+--CRITERIA: XXXXX CODES. XXXXX SITUATION CODES ARE: 1 = XXXXX, 31 = XXXXX, 518 = XXXXX, 548 = XXXXX
+and a.XXXXX in (XXXXX)
+--CRITERIA: XXXXX ID
+-- and a.XXXXX in ()
+--CRITERIA: XXXXX. FORMAT: XXXXX DIGIT WITHOUT HYPHENS
+-- and replace(c.XXXXX,'-','') in ()
+--CRITERIA: XXXXX ID
+-- and a.XXXXX in ()
+--CRITERIA: XXXXX DATE
+-- and a.XXXXX = ''
+--CRITERIA: XXXXX DATE
+-- and a.XXXXX between ('') and ('')
+--CRITERIA: XXXXX ID
+-- and a.XXXXX in ()
+--CRITERIA: XXXXX CODE. OPTIONS: 1 = XXXXX, 15 = XXXXX,
+--19 = XXXXX, 21 = XXXXX, 17 = XXXXX, 11 = XXXXX
+-- and e.XXXXX in ()
+--CRITERIA: XXXXX DATE
+-- and a.XXXXX between ('') and ('')
+--CRITERIA: XXXXX NUMBER
+-- and a.XXXXX in ()
+--CRITERIA: XXXXX. XXXXX OPTIONS: XXXXX, XXXXX, XXXXX, Cont.
+--XXXXX, XXXXX, XXXXX
+-- and XXXXX in ()
+
+GROUP BY XXXXX,XXXXX,XXXXX,XXXXX
+        ,XXXXX,XXXXX,XXXXX,XXXXX
+        ,XXXXX,XXXXX,XXXXX,XXXXX,XXXXX
+        ,XXXXX,XXXXX,XXXXX
+
+order by a.XXXXX desc,a.XXXXX asc
+
+for fetch only with ur
